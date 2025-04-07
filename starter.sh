@@ -1,0 +1,2 @@
+./remover.sh &
+./SNIFF.sh
