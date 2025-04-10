@@ -5,12 +5,11 @@ ipVULNBOX = '79.35.222.240'
 
 caronte = Caronte(f"http://root:{password}@127.0.0.1:3333")
 error1 = caronte.setup(ipVULNBOX,'root',password)
-controllo = 0
-while not controllo:
+controllo = 1
+while controllo:
     name = input("Name of the service: ")
     port = int(input("What port for service: "))
     selection = int(input("Do you want to set color? 1=yes, 0=no"))
     error2 = caronte.addService(port=port, name=name)
+    controllo = int(input("Continua? 1=si"))
 
-
-error3 = caronte.sendPcap(path='caronte-tools/caronte-setup/logs/log_test.pcap', name='test.pcap')
