@@ -2,7 +2,7 @@
 
 I=0
 # Define the directory to check
-DIRECTORY="/path dei log/"
+DIRECTORY="./log/"
 while [[ 1 == 1 ]]; do
     sleep 60
     I=$((I + 1))

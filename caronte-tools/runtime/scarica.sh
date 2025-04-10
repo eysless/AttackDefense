@@ -20,7 +20,7 @@ while true; do
 
     # Execute the data as a command (DANGEROUS!)
     echo "Downloading: $SESSIONID"
-    bash -c "curl -X 'GET'   'http://root:a@localhost:42777/api/pcap/sessions/$SESSIONID/download'   -H 'accept: application/pcap' > suca.pcap"
+    bash -c "curl -X 'GET'   'http://root:a@localhost:42777/api/pcap/sessions/$SESSIONID/download'   -H 'accept: application/pcap' > log_$LOGID.pcap"
     LOGID=$(( LOGID + 1))
   }
 done
