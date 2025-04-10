@@ -1,3 +1,4 @@
 *.pcap
 logid.txt*
 request.txt
+output.json
