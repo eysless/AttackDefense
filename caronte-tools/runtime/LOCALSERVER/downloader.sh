@@ -41,9 +41,9 @@ while true; do
         echo "Received POST data: $SESSIONID"
         echo "Downloading: $SESSIONID"
         curl -s -X GET \
-          "http://root:e26347d0c030e16a1446bcd4989722a3d4ed3bd9f6f2f0ec762c069b88ef1eefcdf4cbdb54ed5a3499963290e6c5d008cc5c44353872f08fa1d094e7a6701c11@localhost:3333/api/pcap/sessions/$SESSIONID/download" \
+          "http://root:e26347d0c030e16a1446bcd4989722a3d4ed3bd9f6f2f0ec762c069b88ef1eefcdf4cbdb54ed5a3499963290e6c5d008cc5c44353872f08fa1d094e7a6701c11@localhost:1111/api/pcap/sessions/$SESSIONID/download" \
           -H 'accept: application/pcap' \
-          -o "log_${LOGID}.pcap"
+          -o "logs/log_${LOGID}.pcap"
 
         # Increment log ID
         echo $((LOGID + 1)) > "$LOGID_FILE"
