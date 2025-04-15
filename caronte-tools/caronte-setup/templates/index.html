@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Caronte Setup</title>
+    <script>
+        async function sendInput() {
+            const userInput = document.getElementById("input-box").value;
+            const response = await fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ text: userInput })
+            });
+
+            const result = await response.json();
+            document.getElementById("result").innerText = result.result;
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter something:</h2>
+    <input type="text" id="input-box" placeholder="Type here..." required>
+    <button onclick="sendInput()">Send</button>
+
+    <p><strong>Output:</strong> <span id="result"></span></p>
+</body>
+</html>
