@@ -3,9 +3,9 @@
 <head>
     <title>Caronte Setup</title>
     <script>
-        async function sendInput() {
-            const userInput = document.getElementById("input-box").value;
-            const response = await fetch('/process', {
+        async function sendIp() {
+            const userInput = document.getElementById("ip").value;
+            const response = await fetch('/ipProcess', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -20,8 +20,8 @@
 </head>
 <body>
     <h2>Enter something:</h2>
-    <input type="text" id="input-box" placeholder="Type here..." required>
-    <button onclick="sendInput()">Send</button>
+    <input type="text" id="ip" placeholder="Inserisci l'ip del server" required>
+    <button onclick="sendIp()">Send</button>
 
     <p><strong>Output:</strong> <span id="result"></span></p>
 </body>
