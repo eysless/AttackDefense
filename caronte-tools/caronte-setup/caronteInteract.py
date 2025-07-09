@@ -22,7 +22,7 @@ class Caronte:
         json = {
             "config": {
                 "server_address": server_address,
-                "flag_regex": "/^[A-Z0-9]{31}=$/",
+                "flag_regex": r"[A-Z0-9]{31}=",
                 "auth_required": True
             },
             "accounts": {

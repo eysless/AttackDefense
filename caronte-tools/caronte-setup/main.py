@@ -1,9 +1,9 @@
 from caronteInteract import *
 
 password = 'e26347d0c030e16a1446bcd4989722a3d4ed3bd9f6f2f0ec762c069b88ef1eefcdf4cbdb54ed5a3499963290e6c5d008cc5c44353872f08fa1d094e7a6701c11'
-ipVULNBOX = '10.60.63.1'
+ipVULNBOX = '10.60.32.1'
 indexone = 999
-caronte = Caronte(f"http://root:{password}@10.81.63.7:1111")
+caronte = Caronte(f"http://root:{password}@localhost:1111")
 error1 = caronte.setup(ipVULNBOX,'root',password)
 controllo = 1
 while controllo:
